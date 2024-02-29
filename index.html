@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ip(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+           else{
+            alert("Geolocation is not supported")
+           }
+        }
+
+        function showPosition(position){
+            alert(position.coords.latitude + " " + position.coords.longitude);
+        }
+    </script>
+
+    <button onclick="ip()">Allow access to IP</button>
+    <!-- <button onclick="showposition(ip)">show position</button> -->
+</body>
+</html>
